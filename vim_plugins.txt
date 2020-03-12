@@ -1,0 +1,17 @@
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+sudo apt install build-essential cmake vim python3-dev
+
+cp vimrc ~/.vimrc
+
+inside vim run 
+:PluginInstall
+
+# this will also install:
+# vundle https://github.com/VundleVim/Vundle.vim
+# nerdtree https://github.com/preservim/nerdtree
+# ycm https://github.com/ycm-core/YouCompleteMe
+
+cd ~/.vim/bundle/YouCompleteMe
+python3 install.py --clangd-completer
+
