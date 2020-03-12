@@ -18,7 +18,8 @@ termcapinfo xterm 'Co#256:AB=\E[48;5;%dm:AF=\E[38;5;%dm'
 defbce on
 
 # mouse tracking allows to switch region focus by clicking
-mousetrack on
+#mousetrack on
+# unfortunately mousetrack on, copy and paste doesn't work
 
 
 # get rid of silly xoff stuff
@@ -49,24 +50,24 @@ screen -t run 2 bash
 # layouts
 layout autosave on
 
-layout new one
+layout new l1
 select 0
 
-layout new two-v
+layout new l2v
 select 0
 split -v
 focus right
 select 1
 focus left
 
-layout new two-h
+layout new l2h
 select 0
 split 
 focus down
 select 1
-focus left
+focus up
 
-layout new three
+layout new l3
 select 0
 split -v
 focus right
@@ -76,7 +77,20 @@ focus down
 select 2
 focus left
 
-#layout select three
-# layout number is faster than layout select for some reason
-layout number 3
+layout new l4
+select 0
+split -v
+focus right
+select 1
+split 
+focus down
+select 2
+focus left
+split
+focus down
+select 2
+focus up
+
+
+layout select l3
 
