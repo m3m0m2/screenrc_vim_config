@@ -1,0 +1,26 @@
+set ssl_force_tls = yes
+set abort_nosubject = no
+set mail_check = 600
+set timeout = 10
+set sort = "reverse-date-received"
+#set signature = "~/.mutt/signature"
+set copy = no
+
+set from = "TODO_UPDATE@gmail.com"
+set realname = "TODO_UPDATE"
+
+# Imap settings
+set imap_user = "TODO_UPDATE@gmail.com"
+set imap_pass = "TODO_UPDATE"
+
+# Smtp settings
+set smtp_url = "smtps://TODO_UPDATE@smtp.gmail.com"
+set smtp_pass = "TODO_UPDATE"
+
+# Remote gmail folders
+set folder = "imaps://imap.gmail.com/"
+set spoolfile = "+INBOX"
+set mbox = "+INBOX"
+set postponed = "+[Gmail]/Drafts"
+set record = "+[Gmail]/Sent Mail"
+set trash = "+[Gmail]/Trash"
