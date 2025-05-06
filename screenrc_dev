@@ -25,6 +25,12 @@ defbce on
 # get rid of silly xoff stuff
 bind s split
 
+# layout navigation
+# ctrl-up = prev layout
+bindkey -t "^[[1;5A" layout prev
+# ctrl-down = next layout
+bindkey -t "^[[1;5B" layout next
+
 # buffers navigation with ctrl-<arrow>
 # ctrl-left = prev buffer
 bindkey -t "^[[1;5D" prev
@@ -62,7 +68,7 @@ focus left
 
 layout new l2h
 select 0
-split 
+split
 focus down
 select 1
 focus up
@@ -72,7 +78,7 @@ select 0
 split -v
 focus right
 select 1
-split 
+split
 focus down
 select 2
 focus left
@@ -82,7 +88,7 @@ select 0
 split -v
 focus right
 select 1
-split 
+split
 focus down
 select 2
 focus left
@@ -91,6 +97,4 @@ focus down
 select 2
 focus up
 
-
-layout select l3
-
+layout select l2v
