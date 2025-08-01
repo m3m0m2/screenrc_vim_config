@@ -2,29 +2,20 @@ set nocompatible              " be iMproved, required
 
 filetype off                  " required
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-
-Plugin 'VundleVim/Vundle.vim'
-Plugin 'tpope/vim-fugitive'
-Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
-Plugin 'sotte/presenting.vim'
-
-" NerdTree
-Plugin 'preservim/nerdtree'
-
-" You Complete Me
-"Plugin 'Valloric/YouCompleteMe'
-
-" Typescript
-Plugin 'HerringtonDarkholme/yats.vim'
-Plugin 'leafgarland/typescript-vim'
-call vundle#end()            " required
-
-" TODO: move vundle plugins above to plugged
-
 call plug#begin('~/.vim/plugged')
+" Old plugins earlier in Vundle
+Plug 'tpope/vim-fugitive'
+Plug 'rstacruz/sparkup', {'rtp': 'vim/'}
+Plug 'sotte/presenting.vim'
+" NerdTree
+Plug 'preservim/nerdtree'
+" You Complete Me, replaced by coc
+"Plug 'Valloric/YouCompleteMe'
+" Typescript
+Plug 'HerringtonDarkholme/yats.vim'
+Plug 'leafgarland/typescript-vim'
+" End of old plugins
+
 " coc code completion
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 " Status bar
