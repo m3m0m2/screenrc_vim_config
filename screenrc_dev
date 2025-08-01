@@ -25,23 +25,34 @@ defbce on
 # get rid of silly xoff stuff
 bind s split
 
-# layout navigation
+# Layout navigation Ctrl + up/down arrow
 # ctrl-up = prev layout
 bindkey -t "^[[1;5A" layout prev
 # ctrl-down = next layout
 bindkey -t "^[[1;5B" layout next
+# ttyX: modifier does not work, use ctrl-B prefix + arrow
+bindkey -t "^b^[[A" layout prev
+bindkey -t "^b^[[B" layout next
 
-# buffers navigation with ctrl-<arrow>
+# Buffers navigation with Ctrl + left/right arrow
 # ctrl-left = prev buffer
 bindkey -t "^[[1;5D" prev
 # ctrl-right = next buffer
 bindkey -t "^[[1;5C" next
+# ttyX: modifier does not work, use ctrl-B + arrow
+bindkey -t "^b^[[D" prev
+bindkey -t "^b^[[C" next
 
 # region navigation with alt-<arrow>
 bindkey -t "^[[1;3A" focus up
 bindkey -t "^[[1;3C" focus right
 bindkey -t "^[[1;3B" focus down
 bindkey -t "^[[1;3D" focus left
+# ttyX: modifier does not work, use ctrl-B + (release ctrl) hjkl (like vim)
+bindkey -t "^bk" focus up
+bindkey -t "^bl" focus right
+bindkey -t "^bj" focus down
+bindkey -t "^bh" focus left
 
 
 # default windows
