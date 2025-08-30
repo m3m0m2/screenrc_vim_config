@@ -56,6 +56,8 @@ set tabstop=4 shiftwidth=4 expandtab
 " Use only 2 spaces for javascript files
 autocmd BufRead,BufNewFile   *.ts,*.js,*.tsx,*.jsx setlocal tabstop=2 shiftwidth=2 expandtab
 " Using instead 4 spaces for C++, autocmd BufRead,BufNewFile   *.c,*.cpp,*.h,*.hpp setlocal tabstop=2 shiftwidth=2 expandtab
+" In C++ use clang-format with gq
+autocmd BufRead,BufNewFile   *.c,*.cpp,*.cc,*.h,*.hpp,*.hh setlocal formatprg=clang-format
 set history=300
 
 " folding zo/c zO/C zM/R
